@@ -1,10 +1,17 @@
-toppings = []
-NeedMoreToppings = True
-while NeedMoreToppings:
-    NextTopping = input('What topping would you like to add (None to finish):')
-    if NextTopping !='None':
-        toppings.append(NextTopping)
-        print(NextTopping + 'will be added')
+GoOn= True
+age = 0
+while GoOn:
+    UsrInput = input('How old are you (enough to finish)): ')
+    if UsrInput.title() !='Enough':
+        age = int(UsrInput)
     else:
-        NeedMoreToppings = False
+        GoOn = False
+        break
+    if age<3:
+        print('Your ticket is free')
+    elif age<12:
+        print('Your ticket is $10')
+    elif age>12:
+        print('Your ticket is $15')
+
         
